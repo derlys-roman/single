@@ -20,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailinput"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="textEmailAddress"/>
@@ -38,6 +39,7 @@
         app:layout_constraintTop_toBottomOf="@id/et_email_input">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passinput"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="textPassword"/>
@@ -46,7 +48,7 @@
 
     <Button
         android:id="@+id/login_button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="@string/login"
         android:textStyle="bold"
@@ -55,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@id/et_password_input"
         app:layout_constraintStart_toStartOf="@id/et_password_input"
         app:layout_constraintEnd_toEndOf="@id/et_password_input"
-        style="@style/Widget.MaterialComponents.Button.TextButton" />
+        style="@style/Widget.MaterialComponents.Button" />
 
     <TextView
         android:id="@+id/tv_create_account"
