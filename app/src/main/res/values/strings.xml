@@ -6,6 +6,6 @@
     <string name="password">Senha</string>
     <string name="login">Login</string>
     <string name="not_account">Não tem uma conta? Crie aqui!</string>
-    <string name="create_account">Criar conta</string>
+    <string name="create_account">Cadastrar</string>
     <string name="name">Nome</string>
 </resources>

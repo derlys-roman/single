@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "464617786420",
+    "project_id": "chatfirebase-derlysroman",
+    "storage_bucket": "chatfirebase-derlysroman.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464617786420:android:3990db927a88b101bece61",
+        "android_client_info": {
+          "package_name": "com.example.single"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464617786420-iq7pb6sb8ghbrq1l75f6t75vfbmj6p5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCCXROswsJWVvixqCWoHbJTwu9Lul-b3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464617786420-iq7pb6sb8ghbrq1l75f6t75vfbmj6p5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
