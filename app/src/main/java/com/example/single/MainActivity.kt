@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun fillLayoutComponents() {
         newHere = binding.tvCreateAccount
-        login = binding.loginButton
+        login = binding.regButton
         email = binding.emailinput
         pasw = binding.passinput
     }

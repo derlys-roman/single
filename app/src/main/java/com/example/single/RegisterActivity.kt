@@ -3,8 +3,10 @@ package com.example.single
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.single.databinding.ActivityRegisterBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -19,6 +21,27 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         fillComponents()
+        registerBtn.setOnClickListener {
+            createUser()
+        }
+    }
+
+    private fun createUser() {
+        val userName = nameInput.text.toString()
+        val userEmail = emailInput.text.toString()
+        val userPass = passwordInput.text.toString()
+        userCheck(userEmail, userPass)
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(userEmail, userPass)
+    }
+
+    private fun userCheck(userEmail: String, userPass: String) {
+        if (userEmail.isNullOrEmpty() || userPass.isNullOrEmpty()){
+            return Toast.makeText(
+                this,
+                "Os campos senha e email devem ser preenchidos",
+                Toast.LENGTH_LONG
+            ).show()
+        }
     }
 
     private fun fillComponents() {
@@ -27,4 +50,5 @@ class RegisterActivity : AppCompatActivity() {
         this.passwordInput = binding.passinput
         this.registerBtn = binding.regButton
     }
+
 }
