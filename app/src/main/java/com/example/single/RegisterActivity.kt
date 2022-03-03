@@ -19,6 +19,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var passwordInput: EditText
     private lateinit var registerBtn: Button
     private lateinit var auth: FirebaseAuth
+    private lateinit var photo: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
@@ -65,7 +66,8 @@ class RegisterActivity : AppCompatActivity() {
         this.emailInput = binding.emailInput
         this.passwordInput = binding.passinput
         this.registerBtn = binding.regButton
-        auth = Firebase.auth
+        this.auth = Firebase.auth
+        this.photo = binding.btnImageProfile
     }
 
 }

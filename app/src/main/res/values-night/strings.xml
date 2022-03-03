@@ -8,4 +8,5 @@
     <string name="not_account">Não tem uma conta? Crie aqui!</string>
     <string name="create_account">Cadastrar</string>
     <string name="name">Nome</string>
+    <string name="photo">Photo</string>
 </resources>
