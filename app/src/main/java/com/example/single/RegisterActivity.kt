@@ -1,5 +1,6 @@
 package com.example.single
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -29,6 +30,15 @@ class RegisterActivity : AppCompatActivity() {
         registerBtn.setOnClickListener {
             createUser()
         }
+        photo.setOnClickListener {
+            selectPhoto()
+        }
+    }
+
+    private fun selectPhoto() {
+        var photoSelect : Intent = Intent(Intent.ACTION_PICK)
+        photoSelect.type = "image/*"
+//        startActivityForResult()
     }
 
     private fun createUser() {
@@ -66,8 +76,8 @@ class RegisterActivity : AppCompatActivity() {
         this.emailInput = binding.emailInput
         this.passwordInput = binding.passinput
         this.registerBtn = binding.regButton
-        this.auth = Firebase.auth
         this.photo = binding.btnImageProfile
+        this.auth = Firebase.auth
     }
 
 }
