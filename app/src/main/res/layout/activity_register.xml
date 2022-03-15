@@ -17,6 +17,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photo_selected"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@android:color/holo_green_dark"
+        tools:src="@color/black"
+        app:layout_constraintTop_toTopOf="@+id/btn_image_profile"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_image_profile"
+        app:layout_constraintStart_toStartOf="@+id/btn_image_profile"
+        app:layout_constraintEnd_toEndOf="@+id/btn_image_profile"/>
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/et_name_input"
         android:layout_width="0dp"
