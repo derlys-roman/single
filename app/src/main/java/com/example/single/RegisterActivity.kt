@@ -1,11 +1,12 @@
 package com.example.single
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.result.ActivityResultCallback
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.single.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -23,6 +24,12 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var photo: Button
     private lateinit var frontPhoto: CircleImageView
+    private val getImage = registerForActivityResult(
+        ActivityResultContracts.GetContent(),
+        ActivityResultCallback {
+            frontPhoto.setImageURI(it)
+        }
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,9 +46,13 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun selectPhoto() {
-        var photoSelect : Intent = Intent(Intent.ACTION_PICK)
-        photoSelect.type = "image/*"
-//        startActivityForResult()
+
+        getImage.launch("image/*")
+
+        photo.alpha = 0f
+//        var photoSelect : Intent = Intent(Intent.ACTION_PICK)
+//        photoSelect.type = "image/*"
+//        startActivityForResult(Intent.createChooser(photoSelect, "select Photo", ), 1)
     }
 
     private fun createUser() {
