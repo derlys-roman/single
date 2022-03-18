@@ -11,6 +11,7 @@ import com.example.single.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import de.hdodenhof.circleimageview.CircleImageView
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -21,6 +22,8 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var registerBtn: Button
     private lateinit var auth: FirebaseAuth
     private lateinit var photo: Button
+    private lateinit var frontPhoto: CircleImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
@@ -78,6 +81,7 @@ class RegisterActivity : AppCompatActivity() {
         this.registerBtn = binding.regButton
         this.photo = binding.btnImageProfile
         this.auth = Firebase.auth
+        this.frontPhoto = binding.photoSelected
     }
 
 }
